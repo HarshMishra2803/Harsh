@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harsh Mishra — Full Stack Developer</title>
-  <meta name="description" content="Full Stack Developer & AI Builder. React, TypeScript, Node.js, MongoDB, Firebase." />
+  <title>Harsh Mishra — Full Stack Developer &amp; AI Builder</title>
+  <meta name="description" content="Full Stack Developer &amp; AI Builder. React, TypeScript, Node.js, MongoDB, Firebase." />
+  <meta name="author" content="Harsh Mishra" />
+  <meta name="keywords" content="Full Stack Developer, React, Next.js, TypeScript, Node.js, MongoDB, Firebase, AI, Portfolio, Harsh Mishra" />
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Harsh Mishra — Full Stack Developer &amp; AI Builder" />
+  <meta property="og:description" content="Full Stack Developer &amp; AI Builder. React, TypeScript, Node.js, MongoDB, Firebase." />
+  <meta property="og:image" content="https://github.com/HarshMishra2803.png" />
+  <meta property="og:url" content="https://harshmishra2803.github.io" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Harsh Mishra — Full Stack Developer" />
+  <meta name="twitter:description" content="Full Stack Developer &amp; AI Builder. React, TypeScript, Node.js." />
+  <meta name="twitter:image" content="https://github.com/HarshMishra2803.png" />
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23EF4444'/><text y='72' x='8' font-size='52' font-family='system-ui,sans-serif' fill='white' font-weight='800'>HM</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -283,10 +298,9 @@
       overflow: hidden;
       position: relative;
       transition: border-color 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth), transform 0.4s var(--ease-smooth);
-      will-change: transform;
     }
     @media (hover: hover) {
-      .card:hover { transform: translateY(-2px); }
+      .card:hover { transform: translateY(-2px); will-change: transform; }
     }
     .card::after {
       content: ''; position: absolute; top: 0; left: 1.5rem; right: 1.5rem; height: 1px;
@@ -434,6 +448,7 @@
       background: var(--surface-2); border: 1px solid var(--border);
       border-radius: var(--radius-md); padding: 1.1rem 1.25rem;
       transition: transform 0.3s var(--ease), border-color 0.3s;
+      position: relative; overflow: hidden;
     }
     .stat-card:hover { transform: translateY(-3px); border-color: var(--border-strong); box-shadow: var(--shadow-md); }
     .stat-card::before {
@@ -441,7 +456,6 @@
       background: var(--text); border-radius: var(--radius-md) var(--radius-md) 0 0;
       opacity: 0; transition: opacity 0.3s;
     }
-    .stat-card { position: relative; overflow: hidden; }
     .stat-card:hover::before { opacity: 1; }
     .stat-icon {
       width: 36px; height: 36px; border-radius: 10px;
@@ -822,7 +836,7 @@
           <span class="bnav-label">About</span>
         </a>
         <a href="#skills" class="bottom-nav-item" data-section="skills">
-          <span class="bnav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <span class="bnav-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
           <span class="bnav-label">Skills</span>
         </a>
       </div>
@@ -885,19 +899,19 @@
   <section class="bento gs-reveal" id="stats">
     <div class="stat-card gs-child">
       <div class="stat-icon">💻</div>
-      <div class="stat-value">2</div>
+      <div class="stat-value" data-count="2" data-suffix="">2</div>
       <div class="stat-label">Production Apps</div>
       <div class="stat-trend">↑ Live on Vercel & Render</div>
     </div>
     <div class="stat-card gs-child">
       <div class="stat-icon">🧩</div>
-      <div class="stat-value">200+</div>
+      <div class="stat-value" data-count="200" data-suffix="+">200+</div>
       <div class="stat-label">LeetCode Solved</div>
       <div class="stat-trend">↑ DSA & Algorithms</div>
     </div>
     <div class="stat-card gs-child">
       <div class="stat-icon">🎓</div>
-      <div class="stat-value">8.56</div>
+      <div class="stat-value" data-count="8.56" data-suffix="" data-float="true">8.56</div>
       <div class="stat-label">CGPA (Cumulative)</div>
       <div class="stat-trend">BBDU · CSE</div>
     </div>
@@ -1023,7 +1037,7 @@
       <div class="projects">
         <article class="project-card">
           <div class="project-img">
-            <img src="assets/synapseai.png" alt="SynapseAI dashboard" loading="lazy" />
+            <img src="assets/synapseai.png" alt="SynapseAI dashboard" loading="lazy" width="800" height="220" />
             <div class="project-img-overlay"></div>
             <span class="project-year">2025</span>
           </div>
@@ -1043,7 +1057,7 @@
         </article>
         <article class="project-card">
           <div class="project-img">
-            <img src="assets/kavach.png" alt="Kavach cybersecurity platform" loading="lazy" />
+            <img src="assets/kavach.png" alt="Kavach cybersecurity platform" loading="lazy" width="800" height="220" />
             <div class="project-img-overlay"></div>
             <span class="project-year">2025</span>
           </div>
@@ -1140,7 +1154,7 @@
   </section>
 
   <footer class="footer gs-reveal">
-  <p>Designed & developed by <a href="#">Harsh Mishra</a> · © 2026</p>
+  <p>Designed &amp; developed by <a href="#about">Harsh Mishra</a> · © 2026</p>
   </footer>
 
 </div>
@@ -1170,7 +1184,7 @@
   const particleCanvas = document.getElementById('particleCanvas');
   if (particleCanvas && !reduced) {
     const pCtx = particleCanvas.getContext('2d');
-    let pW, pH, particles = [];
+    let pW, pH, particles = [], pAnimId;
     const pCount = window.innerWidth < 768 ? 50 : 90;
     const linkDist = 130;
     const mouse = { x: null, y: null, r: 140 };
@@ -1180,7 +1194,11 @@
       pH = particleCanvas.height = window.innerHeight;
     }
     resizeParticles();
-    window.addEventListener('resize', resizeParticles);
+    let pResizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(pResizeTimer);
+      pResizeTimer = setTimeout(resizeParticles, 150);
+    });
 
     class Particle {
       constructor() { this.reset(true); }
@@ -1248,9 +1266,13 @@
           }
         }
       }
-      requestAnimationFrame(drawNetwork);
+      pAnimId = requestAnimationFrame(drawNetwork);
     }
     drawNetwork();
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) cancelAnimationFrame(pAnimId);
+      else { pAnimId = requestAnimationFrame(drawNetwork); }
+    });
   }
 
   // ── CUSTOM CURSOR (GSAP-smoothed) ──
@@ -1499,6 +1521,31 @@
     });
   }
 
+  // ── COUNTER ANIMATION ──
+  (function() {
+    const statEls = document.querySelectorAll('.stat-value[data-count]');
+    if (!statEls.length || reduced) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        obs.unobserve(entry.target);
+        const el = entry.target;
+        const target = parseFloat(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const isFloat = el.dataset.float === 'true';
+        const dur = 1400, t0 = performance.now();
+        (function tick(now) {
+          const p = Math.min((now - t0) / dur, 1);
+          const v = target * (1 - Math.pow(1 - p, 3));
+          el.textContent = (isFloat ? v.toFixed(2) : Math.round(v)) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+          else el.textContent = (isFloat ? target.toFixed(2) : Math.floor(target)) + suffix;
+        })(t0);
+      });
+    }, { threshold: 0.5 });
+    statEls.forEach(el => obs.observe(el));
+  })();
+
   // ── FORM CHAR COUNT ──
   const fmsg = document.getElementById('fmsg');
   const msgHint = document.getElementById('msgHint');
@@ -1538,14 +1585,15 @@
   submitBtn.addEventListener('click', async () => {
     if (!validate()) return;
     submitBtn.classList.add('loading');
-    await new Promise(r => setTimeout(r, 1200));
+    const n = document.getElementById('fname').value.trim();
+    const e = document.getElementById('femail').value.trim();
+    const m = document.getElementById('fmsg').value.trim();
+    await new Promise(r => setTimeout(r, 500));
+    window.open(`mailto:harshmishra.2803@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(n)}&body=${encodeURIComponent(m + '\n\n— ' + e)}`);
     submitBtn.classList.remove('loading');
     form.style.display = 'none';
     success.classList.add('show');
-    const { value: n } = document.getElementById('fname');
-    const { value: e } = document.getElementById('femail');
-    const { value: m } = document.getElementById('fmsg');
-    window.location.href = `mailto:harshmishra.2803@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(n)}&body=${encodeURIComponent(m + '\n\n— ' + e)}`;
+    showToast('Opening your mail app…');
   });
 
   document.getElementById('resetForm').addEventListener('click', () => {
@@ -1554,7 +1602,11 @@
     document.getElementById('fname').value = '';
     document.getElementById('femail').value = '';
     document.getElementById('fmsg').value = '';
-    document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
+    document.getElementById('msgHint').textContent = '0 / 500 characters';
+    document.querySelectorAll('.form-group').forEach(g => {
+      g.classList.remove('has-error');
+      g.querySelector('.form-input, .form-textarea')?.classList.remove('error');
+    });
   });
 
   // ── GITHUB DASHBOARD ──
